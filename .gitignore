@@ -1,0 +1,51 @@
+# Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Build
+/build/
+**/build/
+
+# Gradle
+.gradle/
+local.properties
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Keystore files (⚠️ se você usar keystore para assinar o app)
+*.jks
+*.keystore
+
+# Cache
+.cxx/
+.externalNativeBuild/
+captures/
+output.json
+
+# NDK
+.ndk/
+*.so
+
+# IntelliJ
+*.iml
+*.iws
+out/
+
+# Kotlin/Java
+*.class
+
+# Others
+*.apk
+*.ap_
+
+# Firebase
+google-services.json

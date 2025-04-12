@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">JoKenPo</string>
+    <string name="instrucoes">
+        <b>Regras:</b>\n
+        • Você escolhe entre Pedra, Papel ou Tesoura.\n
+        • O adversário também faz uma escolha.\n
+        • As jogadas são comparadas e o vencedor é determinado da seguinte forma:\n
+            🪨 Pedra quebra Tesoura\n
+            📄 Papel embrulha Pedra\n
+            ✂️ Tesoura corta Papel\n
+            \n
+        • Se os dois escolherem a mesma opção, é empate!\n
+        • Toque para escolher sua jogada e descubra quem vence!
+
+    </string>
+</resources>
