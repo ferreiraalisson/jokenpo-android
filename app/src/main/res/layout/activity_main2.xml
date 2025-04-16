@@ -8,7 +8,6 @@
     android:background="@color/cor_fundo"
     tools:context=".MainActivity2">
 
-
     <TextView
         android:id="@+id/text_info"
         android:layout_width="wrap_content"
@@ -23,8 +22,8 @@
 
     <View
         android:id="@+id/top_circle"
-        android:layout_width="80sp"
-        android:layout_height="80sp"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
         android:layout_marginTop="40sp"
         android:background="@drawable/ic_vazio"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,64 +31,64 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view_tesoura"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/ic_tesoura"
-        app:layout_constraintStart_toEndOf="@id/view_papel"
-        app:layout_constraintTop_toTopOf="@id/view_pedra" />
-
-    <View
         android:id="@+id/view_pedra"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="68dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/ic_pedra"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_info" />
 
     <TextView
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="28dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="Papel"
-        android:textSize="14sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/view_papel"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/view_papel"
         app:layout_constraintTop_toBottomOf="@id/view_papel" />
 
+    <View
+        android:id="@+id/view_tesoura"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/ic_tesoura"
+        app:layout_constraintStart_toEndOf="@id/view_papel"
+        app:layout_constraintTop_toTopOf="@id/view_pedra" />
+
     <TextView
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="28dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="Tesoura"
-        android:textSize="14sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/view_tesoura"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/view_tesoura"
         app:layout_constraintTop_toBottomOf="@id/view_tesoura" />
 
     <View
         android:id="@+id/view_papel"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:layout_marginStart="24dp"
         android:background="@drawable/ic_papel"
         app:layout_constraintStart_toEndOf="@id/view_pedra"
         app:layout_constraintTop_toTopOf="@id/view_pedra" />
 
     <TextView
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="28dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="Pedra"
-        android:textSize="14sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/view_pedra"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/view_pedra"
@@ -97,15 +96,15 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
         android:text="Jogar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.872" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintVertical_bias="0.897" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

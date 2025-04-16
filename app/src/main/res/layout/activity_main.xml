@@ -33,22 +33,22 @@
         app:layout_constraintVertical_bias="0.285" />
 
     <TextView
-        android:layout_width="374dp"
-        android:layout_height="357dp"
+        android:layout_width="338dp"
+        android:layout_height="377dp"
         android:justificationMode="inter_word"
         android:text="@string/instrucoes"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintHorizontal_bias="0.616"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintVertical_bias="0.652" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
         android:text="Avançar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
