@@ -1,6 +1,7 @@
 package com.senac.jokenpo;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,15 +11,33 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Tela3Activity extends AppCompatActivity {
 
+    ImageView iconeDoUsuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tela3);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        iconeDoUsuario = findViewById(R.id.userResult);
+
+        String escolha = getIntent().getStringExtra("user");
+
+        if (escolha != null) {
+            switch (escolha) {
+                case "Pedra":
+                    iconeDoUsuario.setImageResource(R.drawable.ic_pedra);
+                    break;
+                case "Papel":
+                    iconeDoUsuario.setImageResource(R.drawable.ic_papel);
+                    break;
+                case "Tesoura":
+                    iconeDoUsuario.setImageResource(R.drawable.ic_tesoura);
+                    break;
+                default:
+                    iconeDoUsuario.setImageResource(R.drawable.ic_vazio);
+                    break;
+            }
+        }
+
     }
 }

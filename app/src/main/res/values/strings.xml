@@ -16,4 +16,10 @@
         • Aguarde para descubrir quem venceu!
 
     </string>
+    <string name="pedra">Pedra</string>
+    <string name="papel">Papel</string>
+    <string name="tesoura">Tesoura</string>
+    <string name="pedra_icon_description">ícone de pedra</string>
+    <string name="papel_icon_description">ícone de papel</string>
+    <string name="tesoura_icon_description">ícone de tesoura</string>
 </resources>
