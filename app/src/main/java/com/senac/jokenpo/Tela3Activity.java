@@ -20,10 +20,10 @@ public class Tela3Activity extends AppCompatActivity {
 
         iconeDoUsuario = findViewById(R.id.userResult);
 
-        String escolha = getIntent().getStringExtra("user");
+        String escolhaUser = getIntent().getStringExtra("user");
 
-        if (escolha != null) {
-            switch (escolha) {
+        if (escolhaUser != null) {
+            switch (escolhaUser) {
                 case "Pedra":
                     iconeDoUsuario.setImageResource(R.drawable.ic_pedra);
                     break;

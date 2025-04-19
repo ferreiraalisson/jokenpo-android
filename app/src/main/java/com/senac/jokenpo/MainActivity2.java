@@ -34,12 +34,9 @@ public class MainActivity2 extends AppCompatActivity {
 
         escolhaUsuario = selecao;
 
-        if (selecao.equals("Pedra")) {
-            selecionado.setBackgroundResource(R.drawable.ic_pedra);
-        } else if (selecao.equals("Papel")) {
-            selecionado.setBackgroundResource(R.drawable.ic_papel);
-        } else if (selecao.equals("Tesoura")) {
-            selecionado.setBackgroundResource(R.drawable.ic_tesoura);
+        int img = LogicaDoJogo.getImgEscolha(selecao);
+        if (img != -1){
+            selecionado.setBackgroundResource(img);
         }
     }
     public void jogar(View view) {
