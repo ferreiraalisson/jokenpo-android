@@ -2,16 +2,12 @@ package com.senac.jokenpo;
 
 import android.os.Bundle;
 import android.widget.ImageView;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 
 public class Tela3Activity extends AppCompatActivity {
 
-    ImageView iconeDoUsuario;
+    ImageView iconeDoUsuario, iconeCpu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,24 +15,23 @@ public class Tela3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_tela3);
 
         iconeDoUsuario = findViewById(R.id.userResult);
+        iconeCpu  = findViewById(R.id.cpuResult);
 
         String escolhaUser = getIntent().getStringExtra("user");
+        String escolhaCpu = LogicaDoJogo.EscolhaCpu();
 
-        if (escolhaUser != null) {
-            switch (escolhaUser) {
-                case "Pedra":
-                    iconeDoUsuario.setImageResource(R.drawable.ic_pedra);
-                    break;
-                case "Papel":
-                    iconeDoUsuario.setImageResource(R.drawable.ic_papel);
-                    break;
-                case "Tesoura":
-                    iconeDoUsuario.setImageResource(R.drawable.ic_tesoura);
-                    break;
-                default:
-                    iconeDoUsuario.setImageResource(R.drawable.ic_vazio);
-                    break;
-            }
+        if (escolhaUser == null) {
+            escolhaUser = "Vazio";
+        }
+
+        int imgUser = LogicaDoJogo.getImgEscolha(escolhaUser);
+        if (imgUser != -1) {
+            iconeDoUsuario.setImageResource(imgUser);
+        }
+
+        int imgCpu = LogicaDoJogo.getImgEscolha(escolhaCpu);
+        if (imgCpu != -1) {
+            iconeCpu.setImageResource(imgCpu);
         }
 
     }
