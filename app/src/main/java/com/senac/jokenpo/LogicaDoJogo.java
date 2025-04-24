@@ -1,37 +1,55 @@
 package com.senac.jokenpo;
 
+
 import java.util.Random;
 
 public class LogicaDoJogo {
-    public static int getImgEscolha(String escolha){
-        switch (escolha){
-            case "Pedra":
-                return R.drawable.ic_pedra;
-            case "Papel":
-                return R.drawable.ic_papel;
-            case "Tesoura":
-                return R.drawable.ic_tesoura;
-            default:
-                return -1;
-        }
-    }
 
-    public static String EscolhaCpu(){
-        String[] opcoes = {"Pedra", "Papel", "Tesoura"};
-        int numero = new Random().nextInt(3);
-        return opcoes[numero];
-        }
-
-    public static String resultados(String user, String cpu) {
-        if (user.equals(cpu)) {
-            return "Empate!";
-        } else if ((user.equals("Pedra") && cpu.equals("Tesoura")) ||
-                (user.equals("Tesoura") && cpu.equals("Papel")) ||
-                (user.equals("Papel") && cpu.equals("Pedra"))) {
+    public static String embate(String escolhaJogador, String escolhaCPU) {
+        if (escolhaJogador.equals(escolhaCPU)) return "Empate!";
+        if ((escolhaJogador.equals("pedra") && escolhaCPU.equals("tesoura")) ||
+                (escolhaJogador.equals("papel") && escolhaCPU.equals("pedra")) ||
+                (escolhaJogador.equals("tesoura") && escolhaCPU.equals("papel"))) {
             return "Você venceu!";
         } else {
             return "Você perdeu!";
         }
     }
 
+    public static int[] atualizarPlacar(String resultado, int[] placar) {
+        switch (resultado) {
+            case "Você venceu!":
+                placar[0]++;
+                break;
+            case "Empate!":
+                placar[1]++;
+                break;
+            case "Você perdeu!":
+                placar[2]++;
+                break;
+        }
+        return placar;
+    }
+
+    public static String ResultadoFinal(String nome, int[] placar) {
+        return nome + ", aqui está seu placar final:\n\nVitórias: " + placar[0] +
+                "\nEmpates: " + placar[1] +
+                "\nDerrotas: " + placar[2];
+    }
+
+    public static int getImagemEscolha(String escolha) {
+        switch (escolha) {
+            case "pedra": return R.drawable.ic_pedra;
+            case "papel": return R.drawable.ic_papel;
+            case "tesoura": return R.drawable.ic_tesoura;
+            default: return R.drawable.ic_vazio;
+        }
+    }
+
+    public static String escolhaCPU() {
+        String[] opcoes = {"pedra", "papel", "tesoura"};
+        int numero = new Random().nextInt(3);
+        return opcoes[numero];
+    }
 }
+

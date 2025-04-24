@@ -27,7 +27,6 @@
         android:layout_height="110dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/ic_pedra"
-        android:onClick="selecionarPedra"
         android:contentDescription="@string/pedra_icon_description"
         app:layout_constraintEnd_toStartOf="@+id/view_papel"
         app:layout_constraintHorizontal_bias="0.5"
@@ -41,7 +40,6 @@
         android:layout_height="110dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/ic_papel"
-        android:onClick="selecionarPapel"
         android:contentDescription="@string/papel_icon_description"
         app:layout_constraintEnd_toStartOf="@+id/view_tesoura"
         app:layout_constraintHorizontal_bias="0.5"
@@ -55,7 +53,6 @@
         android:layout_height="110dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/ic_tesoura"
-        android:onClick="selecionarTesoura"
         android:contentDescription="@string/tesoura_icon_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -115,6 +112,22 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/view_tesoura"
         app:layout_constraintTop_toBottomOf="@id/view_tesoura" />
+
+    <EditText
+        android:id="@+id/input_nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="228dp"
+        android:backgroundTint="@color/white"
+        android:hint="Digite seu nome"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black2"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_info"
+        app:layout_constraintWidth_percent="0.8" />
 
     <Button
         android:id="@+id/btn_jogar"
